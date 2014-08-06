@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "PreViewViewController.h"
 
 @implementation AppDelegate
 
@@ -14,6 +15,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    PreViewViewController * preVC = [[[PreViewViewController alloc] init] autorelease];
+    UINavigationController * rootNV = [[[UINavigationController alloc] initWithRootViewController:preVC] autorelease];
+    self.window.rootViewController = rootNV;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

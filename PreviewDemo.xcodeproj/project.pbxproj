@@ -19,6 +19,10 @@
 		E79820ED1992468900602CD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79820D51992468900602CD9 /* UIKit.framework */; };
 		E79820F51992468900602CD9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E79820F31992468900602CD9 /* InfoPlist.strings */; };
 		E79820F71992468900602CD9 /* PreviewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E79820F61992468900602CD9 /* PreviewDemoTests.m */; };
+		E79821021992479100602CD9 /* PreViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E79821011992479100602CD9 /* PreViewViewController.m */; };
+		E79821051992489500602CD9 /* PreviewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E79821041992489500602CD9 /* PreviewDataSource.m */; };
+		E798210919924B0B00602CD9 /* people.xls in Resources */ = {isa = PBXBuildFile; fileRef = E798210819924B0B00602CD9 /* people.xls */; };
+		E798210C19924DC000602CD9 /* LCPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E798210B19924DC000602CD9 /* LCPreviewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,13 @@
 		E79820F21992468900602CD9 /* PreviewDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PreviewDemoTests-Info.plist"; sourceTree = "<group>"; };
 		E79820F41992468900602CD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E79820F61992468900602CD9 /* PreviewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreviewDemoTests.m; sourceTree = "<group>"; };
+		E79821001992479100602CD9 /* PreViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreViewViewController.h; sourceTree = "<group>"; };
+		E79821011992479100602CD9 /* PreViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreViewViewController.m; sourceTree = "<group>"; };
+		E79821031992489500602CD9 /* PreviewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewDataSource.h; sourceTree = "<group>"; };
+		E79821041992489500602CD9 /* PreviewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewDataSource.m; sourceTree = "<group>"; };
+		E798210819924B0B00602CD9 /* people.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = people.xls; sourceTree = "<group>"; };
+		E798210A19924DC000602CD9 /* LCPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCPreviewController.h; sourceTree = "<group>"; };
+		E798210B19924DC000602CD9 /* LCPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCPreviewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +88,7 @@
 		E79820C51992468900602CD9 = {
 			isa = PBXGroup;
 			children = (
+				E798210819924B0B00602CD9 /* people.xls */,
 				E79820D71992468900602CD9 /* PreviewDemo */,
 				E79820F01992468900602CD9 /* PreviewDemoTests */,
 				E79820D01992468900602CD9 /* Frameworks */,
@@ -107,8 +119,11 @@
 		E79820D71992468900602CD9 /* PreviewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E79821141992533000602CD9 /* LCPreview */,
 				E79820E01992468900602CD9 /* AppDelegate.h */,
 				E79820E11992468900602CD9 /* AppDelegate.m */,
+				E79821001992479100602CD9 /* PreViewViewController.h */,
+				E79821011992479100602CD9 /* PreViewViewController.m */,
 				E79820E31992468900602CD9 /* Images.xcassets */,
 				E79820D81992468900602CD9 /* Supporting Files */,
 			);
@@ -142,6 +157,17 @@
 				E79820F31992468900602CD9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E79821141992533000602CD9 /* LCPreview */ = {
+			isa = PBXGroup;
+			children = (
+				E79821031992489500602CD9 /* PreviewDataSource.h */,
+				E79821041992489500602CD9 /* PreviewDataSource.m */,
+				E798210A19924DC000602CD9 /* LCPreviewController.h */,
+				E798210B19924DC000602CD9 /* LCPreviewController.m */,
+			);
+			name = LCPreview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +247,7 @@
 			files = (
 				E79820DC1992468900602CD9 /* InfoPlist.strings in Resources */,
 				E79820E41992468900602CD9 /* Images.xcassets in Resources */,
+				E798210919924B0B00602CD9 /* people.xls in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E79820E21992468900602CD9 /* AppDelegate.m in Sources */,
+				E798210C19924DC000602CD9 /* LCPreviewController.m in Sources */,
 				E79820DE1992468900602CD9 /* main.m in Sources */,
+				E79821021992479100602CD9 /* PreViewViewController.m in Sources */,
+				E79821051992489500602CD9 /* PreviewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +389,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PreviewDemo/PreviewDemo-Prefix.pch";
 				INFOPLIST_FILE = "PreviewDemo/PreviewDemo-Info.plist";
@@ -372,6 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PreviewDemo/PreviewDemo-Prefix.pch";
 				INFOPLIST_FILE = "PreviewDemo/PreviewDemo-Info.plist";
@@ -441,6 +473,7 @@
 				E79820FC1992468900602CD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E79820FD1992468900602CD9 /* Build configuration list for PBXNativeTarget "PreviewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +482,7 @@
 				E79820FF1992468900602CD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
